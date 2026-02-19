@@ -3,8 +3,14 @@ title: "HSF Presentations"
 layout: plain
 ---
 
+## 2026
+
+* [HSF: The HEP Software Foundation](https://indico.cern.ch/event/1606722/contributions/6895790/attachments/3212649/5725221/2026-02-05_EVERSECommunityEngagementEvent.pdf), [EVERSE Community Engagement Event](https://indico.cern.ch/event/1606722/), CERN, 5 February 2026, Eduardo Rodrigues
+
 ## 2025
 
+* [HSF: The HEP Software Foundation](https://indico.ific.uv.es/event/8035/contributions/28784/attachments/14459/21023/2025-11-19_XVII-CPAN-DAYS_COMCHA.pdf), [XVII CPAN Days](https://indico.ific.uv.es/event/8035/), 19 November 2025, Eduardo Rodrigues
+* [HSF: Vision and Role in MC Toolchain Sustainability](https://indico.cern.ch/event/1553687/contributions/6728537/attachments/3151492/5596557/HSFTalk.pdf), [LHC Monte Carlo WG plenary meeting](https://indico.cern.ch/event/1553687), CERN, 9 October 2025, Saptaparna Bhattacharya
 * [HEP Software Foundation: community software and software sustainability, training, Scikit-HEP project – overview and future](https://indico.desy.de/event/49823/), PUNCHLunch seminars, 26 June 2025, Michel Hernandez Villanueva, Eduardo Rodrigues, Graeme A Stewart
 * [News from the HSF](https://indico.cern.ch/event/1476120/contributions/6442365/attachments/3047972/5386093/EduardoRodrigues_2025-04-10_SWIFT-HEP-workshop.pdf), [Joint GridPP SWIFT-HEP Workshop](https://indico.cern.ch/event/1476120), 10 April 2025, Eduardo Rodrigues
 

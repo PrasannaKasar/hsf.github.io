@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="{{ page.description | default: site.description | default: 'HEP Software Foundation - Facilitating cooperation in High Energy Physics software and computing' }}">
     <title>{{ page.title }}</title>
     <link rel="icon" type="image/x-icon" href="{{ '/images/hsf_logo_angled.png' | relative_url }}">
 
-    <!-- bootstrap framework -->
+    <!-- Bootstrap framework CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css">
 
     <link rel="stylesheet" href="{{ '/css/hsf.css' | relative_url }}" type="text/css" />
 </head>
 <body>
+<!-- Skip to main content for accessibility -->
+<a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+
 {% include navbar.ext %}
 
-<div class="container">
+<div class="container" id="main-content" role="main">
 
   {{ content }}
 
@@ -35,5 +39,49 @@ Thanks to <a href="https://pages.github.com/">GitHub Pages</a>, <a href="http://
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!-- Navbar Hover Effect -->
+<script>
+$(document).ready(function() {
+
+  function applyDesktopNavbar() {
+    // Turn on hover-open functionality
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).addClass('open');
+    }, function() {
+      $(this).removeClass('open');
+    });
+
+    // Disable the default click and remove focus styling on desktop
+    $('.dropdown > a.dropdown-toggle').on('click.desktop', function(e) {
+      e.preventDefault();  // Prevents the link from being followed
+      e.stopPropagation(); // Stops the event from bubbling up
+      $(this).blur();      // Removes the focus, getting rid of the yellow color
+    });
+  }
+
+  function removeDesktopNavbar() {
+    // Turn off hover functionality for mobile
+    $('ul.nav li.dropdown').off('mouseenter mouseleave');
+    // Restore default click behavior for mobile
+    $('.dropdown > a.dropdown-toggle').off('.desktop');
+  }
+
+  // Check window size to apply the correct behavior
+  function toggleNavbarBehavior() {
+    if ($(window).width() > 767) {
+      applyDesktopNavbar();
+    } else {
+      removeDesktopNavbar();
+    }
+  }
+
+  // Run the check once on page load
+  toggleNavbarBehavior();
+
+  // And run it again whenever the window is resized
+  $(window).on('resize', toggleNavbarBehavior);
+
+});
+</script>
 </body>
 </html>
